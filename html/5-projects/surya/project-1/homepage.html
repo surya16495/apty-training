@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Homepage</title>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to my personal Profile Page</h1>
+    </header>
+    <main class="main-content">
+      <section class="about-me">
+        <h2>About Me</h2>
+        <span>Hi, I'm Surya Prakash.</span>
+        <p>
+          A passionate Full Stack Developer currently working as a Solutions
+          Engineer at Apty, where I help bridge technology with user needs
+          through smart, scalable solutions. I previously worked as a Full Stack
+          Developer Intern at Syncronota, contributing to real-time features and
+          backend APIs. Skilled in React.js, Node.js, and Firebase, I love
+          building clean, responsive applications that solve real-world
+          problems.
+        </p>
+      </section>
+      <section class="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <div>
+              <p>
+                <span class="study"> B.Tech in CSE - Artificial Intelligence </span>, KITS,
+                Guntur
+              </p>
+              <h4>(2021-2025)</h4>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>
+                <span class="study"> Intermediate in MPC </span>, Sri Chaitanya Junior College,
+                Vijayawada
+              </p>
+              <h4>(2019-2021)</h4>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>
+                <span class="study"> Secondary School Certificate </span>, Dr KKR's Gowtham High School,
+                Gudivada
+              </p>
+              <h4>(2018-2019)</h4>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li><span>Programming Languages:</span> JavaScript, Python, C, SQL</li>
+          <li>
+            <span>Web Technologies:</span> React.js, Next.js, Node.js, Express.js, HTML, CSS
+          </li>
+          <li><span>Databases:</span> MongoDB, Firebase</li>
+          <li><span>Tools & Platforms:</span> Git, Figma, ChatGPT</li>
+        </ul>
+      </section>
+      <section class="contact">
+        <form class="contact-form" action="#">
+          <h2>Contact Me</h2>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="[a-zA-Z.'\- ]{3,}"/> 
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}"/>
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" minlength="10" maxlength="500" required></textarea>
+          </div>
+          <div>
+            <label for="dob" >DOB:</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <input type="submit" class="button"></input>
+          <p>Feel free to reach out to me for any queries or collaborations!</p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Surya Prakash. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

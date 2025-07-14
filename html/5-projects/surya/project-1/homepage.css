@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color: #0b028494;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.main-content{
+    background-color: #edecfd3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+section{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-me h2{
+    color: #0b028494;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.about-me span{
+    font-size: 2em;
+    color: rgba(134, 29, 232, 0.79);
+    font-weight: bold;
+}
+.education{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.education h2{
+    color: #0b028494;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.education ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.education div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.study{
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skills h2{
+    color: #0b028494;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.skills ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skills li span{
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+}
+.contact{
+    max-width: 400px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+.contact-form h2{
+    color: #0b028494;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.contact-form div{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-form label{
+    font-weight: bold;
+    color: #000;
+}
+.contact-form input, .contact-form textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+.contact-form .button{
+    background-color: #0b028494;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 120px;
+    width: auto;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.contact-form p{
+    text-align: center;
+    color: #0b028494;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b028494;
+    color: white;
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+}
