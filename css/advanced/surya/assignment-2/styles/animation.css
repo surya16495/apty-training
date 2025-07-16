@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1a1a1a, #3d3d3d);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff7a00;
+  animation: title 3s linear 1;
+}
+@keyframes title {
+  0% {
+    transform: translateY(50px);
+    font-size: 5rem;
+    color: white;
+  }
+  50% {
+    transform: translateY(25px);
+    font-size: 3.75rem;
+    color: black;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.container img {
+  height: 200px;
+  width: auto;
+  animation: bike-ride 8s ease-out infinite;
+}
+@keyframes bike-ride {
+  from {
+    transform: translateX(-60vw);
+  }
+  to {
+    transform: translateX(60vw);
+  }
+}
+.container p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  line-height: 1.5;
+  color: aliceblue;
+  animation: quote 3s ease 1;
+}
+
+@keyframes quote {
+  0% {
+    transform: translateY(50px);
+    font-size: 3rem;
+    color: black;
+  }
+  50% {
+    transform: translateY(25px);
+    font-size: 2rem;
+    color: #ff7a00;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.container hr {
+  width: 60%;
+  margin: 1rem 0;
+  border: none;
+  height: 3px;
+  background: #ff7a00;
+  box-shadow: 0 0 10px #ff7a00;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    background-image: url("../sources/small-screen-image.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+  }
+  .container img {
+    display: none;
+  }
+  .container hr {
+    display: none;
+  }
+  .container p::before {
+    content: "Open in a bigger screen to view the animation!";
+    font-size: 1.2rem;
+    color: aliceblue;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px #ff7a00;
+  }
+  .container p {
+    font-size: 0px;
+    animation: none;
+    margin-bottom: 3rem;
+  }
+}

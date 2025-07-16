@@ -1,0 +1,122 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #2e1065 0%, #7f1d1d 60%, #0c0a0a 100%);
+}
+.navbar {
+  background-image: linear-gradient(to right, #7f1d1d, #dc2626);
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  color: #fef9c3;
+  font-family: "Teko", "Unbounded";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.container {
+  flex: 1;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movie-description {
+  display: flex;
+  flex: 1 1 600px;
+  align-items: center;
+  min-height: 500px;
+  background-image: url("../resources/movie.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 0 10px whitesmoke;
+}
+.story-container {
+  max-width: 800px;
+}
+.story {
+  color: #f3f4f6;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  background: linear-gradient(to bottom, #f1f5f987, #f1f5f900);
+  padding: 5%;
+  border-radius: 25px;
+}
+.story span {
+  color: #fca105;
+  font-size: 1.1rem;
+  font-family: "Orbitron", "Noto Sans";
+  text-shadow: 2px 2px 4px #7f1d1d;
+  display: block;
+  margin-bottom: 1rem;
+}
+.sidebar {
+  max-width: 600px;
+  background-color: #1e1b4b;
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 10px whitesmoke;
+  border-radius: 25px;
+}
+.sidebar h3 {
+  color: #f3f4f6;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  border-bottom: 2px solid #f59e0b;
+  font-size: 2rem;
+}
+.cast-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+.actor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.actor img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.actor p {
+  color: #f59e0b;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+footer {
+  background-image: linear-gradient(to right, #7f1d1d, #dc2626);
+  color: #fef9c3;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  max-width: 1200px;
+  margin: 0 auto;
+}
