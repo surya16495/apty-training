@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline vs Internal vs External</title>
+  <script>
+    function changeText() {
+      document.getElementById("output").textContent = "Internal JavaScript";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="
+    document.getElementById('output').textContent = 'Inline Javascript';
+  ">Click Me</button>
+  <p id="output">Waiting...</p>
+    <script src="./scripts/index.js"></script>
+  </ul>
+</body>
+</html>
