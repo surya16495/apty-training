@@ -1,3 +1,4 @@
-function changeText() {
-    document.getElementById("output").innerText = "External JavaScript";
-}
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    alert('External Javascript');
+});
