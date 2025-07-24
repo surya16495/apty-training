@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators</title>
+</head>
+<body>
+    <h1>Comparison Operators</h1>
+    <label for="value1">Value 1 :</label>
+    <input type="text" id="value1" placeholder="Value1" required>
+    <select name="type1" id="type1">
+        <option value="number" selected>number</option>
+        <option value="string">string</option>
+        <option value="boolean">boolean</option>
+        <option value="undefined">undefined</option>
+        <option value="null">null</option>
+        <option value="object">object</option>
+    </select>
+    <br>
+    <br>
+    <label for="value2">Value 2 :</label>
+    <input type="text" id="value2" placeholder="Value2" required>
+    <select name="type2" id="type2">
+        <option value="number" selected>number</option>
+        <option value="string">string</option>
+        <option value="boolean">boolean</option>
+        <option value="undefined">undefined</option>
+        <option value="null">null</option>
+        <option value="object">object</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="looseEquals()">==</button>
+    <button onclick="strictEquals()">===</button>
+    <button onclick="looseNotEqual()">!=</button>
+    <button onclick="strictNotEqual()">!==</button>
+    <button onclick="greaterThan()"> &gt; </button>
+    <button onclick="lessThan()"> &lt; </button>
+    <button onclick="greaterThanOrEquals()"> &gt;= </button>
+    <button onclick="lessThanOrEquals()"> &lt;= </button>
+    <br>
+    <br>
+    <p id="result"></p>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
