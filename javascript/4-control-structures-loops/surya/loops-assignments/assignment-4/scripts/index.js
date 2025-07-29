@@ -9,7 +9,10 @@ function calculate() {
     if (array1 != '') {
         const array = array1.split(',');
         for (let i of array) {
-            result += Number(i);
+            let num = Number(i);
+            if(!isNaN(num)){
+                result+=num;
+            }
         };
         let average =  result / array.length;
         output.textContent = `Sum of values in given array ${array} = ${result} & Average is ${average}`;
