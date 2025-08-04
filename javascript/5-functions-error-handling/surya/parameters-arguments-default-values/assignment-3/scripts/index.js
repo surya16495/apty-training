@@ -14,7 +14,7 @@ form.addEventListener('submit',(e)=>{
     const height = ((input1 != '') && (!isNaN(Number(input1)))) ? Number(input1) : undefined;
     const input2 = document.getElementById('width').value;
     const width = ((input2 != '') && (!isNaN(Number(input2)))) ? Number(input2) : undefined;
-    let [peri,area]= [...perimeter(height,width)];
+    let [peri,area]= [perimeter(height,width)];
     result.textContent = `Area = ${area} ; Perimeter = ${peri}`;
 })
 

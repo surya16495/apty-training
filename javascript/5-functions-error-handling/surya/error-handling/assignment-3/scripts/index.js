@@ -1,6 +1,6 @@
 const users = {
-    "lucky": { "address": { "city": "Hyderabad" } },
-    "nishma": { "address": { "city": "Mumbai" } }
+    "surya": { "address": { "city": "Hyderabad" } },
+    "prakash": { "address": { "city": "Mumbai" } }
 }
 
 const default_city = "Pune"

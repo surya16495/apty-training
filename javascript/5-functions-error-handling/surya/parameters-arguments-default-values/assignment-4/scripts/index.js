@@ -6,9 +6,9 @@ function callback(str = "Default String"){
 
 function processString() {
     const userInput = document.getElementById('string').value;
-    const processed = function (input) {
+    const processed = (input) => {
         if (input === "") {
-            return "No input provided";
+            return callback(); 
         }
 
         return callback(input);
