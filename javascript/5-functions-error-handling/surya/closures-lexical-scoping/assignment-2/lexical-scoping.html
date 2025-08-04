@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scoping in nested Functions</title>
+  </head>
+  <body>
+    <h1>Lexical Scoping in nested Functions</h1>
+    <form id="scoping-form">
+      <label for="outer-variable">Outer Variable:</label>
+      <input type="text" id="outer-variable" name="outer-variable" />
+      <br /><br>
+      <label for="middle-variable">Middle Variable:</label>
+      <input type="text" id="middle-variable" name="middle-variable" />
+      <br /><br>
+      <label for="inner-variable">Inner Variable:</label>
+      <input type="text" id="inner-variable" name="inner-variable" />
+      <br /><br>
+      <button type="submit">Generate Output</button>
+    </form>
+    <p id="scoping-output"></p>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
