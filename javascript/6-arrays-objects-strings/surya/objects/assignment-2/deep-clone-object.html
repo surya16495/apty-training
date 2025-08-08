@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Clone an Object</title>
+</head>
+<body>
+    <h1>Deep Clone an Object</h1>
+
+    <form onsubmit="handleOnSubmit(event)">
+          <label for="object_input">Input Object:</label><br>
+          <textarea
+            id="object_input"
+            placeholder='e.g., { "a": 1, "b": { "c": 2 } }' rows="4" cols="50"
+          ></textarea><br><br>
+          <button type="submit">Clone Object</button>
+        </form>
+        <p>Provide a nested JSON object to clone. Example: { "a": 1, "b": { "c": 2 } }</p>
+        <h2>Result :</h2>
+        <div class="output">Object will be cloned here after submission.</div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
