@@ -32,7 +32,7 @@ const htmlContent = `
                         const row = document.querySelectorAll('#myTable tbody tr')[rowNumber - 1];
                          if (row) {
                             row.classList.add('active');
-                            activeRow = row; // store the reference so getActiveRow works
+                            activeRow = row; 
                         }
                     }
                     function getActiveRow() {
