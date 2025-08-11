@@ -27,10 +27,15 @@ const htmlContent = `
                 </table>
                 <script>
                     let activeRow = null;
-                    window.setActiveRow = function(rowNumber) {
-                        activeRow = document.querySelectorAll('#myTable tbody tr')[rowNumber - 1];
+                    function setActiveRow(rowNumber) {
+                        document.querySelectorAll('#myTable tbody tr').forEach(row => row.classList.remove('active'));
+                        const row = document.querySelectorAll('#myTable tbody tr')[rowNumber - 1];
+                         if (row) {
+                            row.classList.add('active');
+                            activeRow = row; // store the reference so getActiveRow works
+                        }
                     }
-                    window.getActiveRow = function() {
+                    function getActiveRow() {
                         return activeRow;
                     }
                 </script>

@@ -25,17 +25,6 @@ const htmlContent = `
                             </tr>`).join("")}
                     </tbody>
                 </table>
-                <script>
-                    let activeRow = null;
-                    function setActiveRow(rowNumber) {
-                        shadowRoot.querySelectorAll('#myTable tbody tr').forEach(row => row.classList.remove('active'));
-                        const row = shadowRoot.querySelectorAll('#myTable tbody tr')[rowNumber - 1];
-                        if (row) row.classList.add('active');
-                    }
-                    function getActiveRow() {
-                        return activeRow;
-                    }
-                </script>
             </body>
             </html>
         `;

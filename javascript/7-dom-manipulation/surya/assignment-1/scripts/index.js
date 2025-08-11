@@ -23,12 +23,11 @@ function changeSpanText() {
 }
 
 function toggleDisabled() {
-    let names = ['input1','input2','input3'];
-    for (let i=0; i<names.length;i++){
-        document.getElementsByName(names[i])[0].disabled=true;
-        document.getElementsByName(names[i])[0].placeholder='disabled';
-    }
-    
+    const inputs = document.querySelectorAll('td:nth-of-type(4) input[type="text"]');
+    inputs.forEach(input => {
+        input.disabled = !input.disabled;
+        input.placeholder = input.disabled ? 'disabled' : 'enabled';
+    });
 }
 
 function addCustomAttribute() {

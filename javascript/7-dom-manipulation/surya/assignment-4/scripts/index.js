@@ -1,11 +1,11 @@
 const result = document.getElementById('result');
 
 function countElements() {
-const allElements = document.body.querySelectorAll("*");
-    const uniqueTags = [...new Set(
-    Array.from(allElements).map(el => el.tagName.toLowerCase())
-    )];
-    const obj = {};
-    uniqueTags.map(tag=>obj[tag]=document.body.querySelectorAll(tag).length);
-    result.textContent=JSON.stringify(obj);
+    const allElements = document.body.querySelectorAll("*");
+    const tagCounts = {};
+    allElements.forEach(el => {
+        const tagName = el.tagName.toLowerCase();
+        tagCounts[tagName] = (tagCounts[tagName] || 0) + 1;
+    });
+    result.textContent = JSON.stringify(tagCounts);
 }
