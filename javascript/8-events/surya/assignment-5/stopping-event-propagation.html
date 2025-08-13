@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopping Event Propagation</title>
+    <style>
+        #div1{
+            border: 1px solid red;
+            padding: 20px;
+        }
+        #div2{
+            border: 1px solid green;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stopping Event Propagation</h1>
+    <div id="div1">
+        container 1
+        <div id="div2">Container 2</div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
