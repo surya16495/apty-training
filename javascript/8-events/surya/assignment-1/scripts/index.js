@@ -5,23 +5,30 @@ for(let i=1; i<=10;i++){
     for(let j=1;j<11;j++){
         let td = document.createElement('td');
         td.textContent = `${i} : ${j}`;
-        td.id=`id-${j}`;
         tr.appendChild(td);
     }
     table.appendChild(tr);
 }
 
+
+function toggleHighlight(event,add){
+    const cell = event.target;
+    if (cell.tagName !== 'TD') {
+        return;
+    }
+    const row = cell.parentElement;
+    const colIndex = cell.cellIndex;
+    const method = add ? 'add' : 'remove';
+
+    row.classList[method]('highlight');
+
+    const cellsInColumn = table.querySelectorAll(`td:nth-child(${colIndex + 1})`);
+    cellsInColumn.forEach(c => c.classList[method]('highlight'));
+}
+
 table.addEventListener("mouseover",(event)=>{
-    const row = event.target.closest('tr');
-if (row) row.classList.add('highlight');
-    document.querySelectorAll(`#${event.target.id}`).forEach((item)=>{
-        item.classList.add('highlight');
-    })
+        toggleHighlight(event, true);
 })
 table.addEventListener("mouseout",(event)=>{
-    const row = event.target.closest('tr');
-if (row) row.classList.remove('highlight');
-document.querySelectorAll(`#${event.target.id}`).forEach((item)=>{
-        item.classList.remove('highlight');
-    })
+        toggleHighlight(event, false);
 })

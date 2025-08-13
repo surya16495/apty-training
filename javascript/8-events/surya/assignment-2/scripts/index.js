@@ -14,8 +14,8 @@ function formatKeyCombination(event){
 window.addEventListener('keydown',(event)=>{
     if (event.repeat) return;
 
-    div1.innerText += `${formatKeyCombination(event)} \n`;
+    div1.innerHTML += `${formatKeyCombination(event)} <br/>`;
 });
 window.addEventListener('keyup',(event)=>{
-    div2.innerText += `${formatKeyCombination(event)} \n`;
+    div2.innerHTML += `${formatKeyCombination(event)} <br/>`;
 });

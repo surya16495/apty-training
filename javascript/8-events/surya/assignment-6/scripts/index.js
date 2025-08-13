@@ -1,9 +1,9 @@
 document.getElementById('form').addEventListener('submit',(e)=>{
     e.preventDefault();
 })
-let nameError = document.getElementById('nameError');
-let mailError = document.getElementById('mailError');
-let passwordError = document.getElementById('passwordError');
+const nameError = document.getElementById('nameError');
+const mailError = document.getElementById('mailError');
+const passwordError = document.getElementById('passwordError');
 document.getElementById('name').addEventListener('input',(e)=>{
     if(e.target.value.trim().length < 4){
         nameError.textContent='Enter a valid name';
@@ -15,7 +15,7 @@ document.getElementById('name').addEventListener('input',(e)=>{
 document.getElementById('email').addEventListener('input',(e)=>{
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(e.target.value.trim())) {
-        mailError.textContent = "Please enter a valid email. ex: 'surya@apty.io";
+        mailError.textContent = "Please enter a valid email. ex: 'surya@apty.io'";
         mailError.style.color='red'
     }else{
     mailError.textContent = "";
