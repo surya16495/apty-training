@@ -10,7 +10,7 @@ document.getElementById("openChildWindow").addEventListener("click", () => {
 
 document.getElementById("sendMessageToChild").addEventListener("click", () => {
 	if (childWindow) {
-		childWindow.postMessage("Hello from Parent Window!", "*");
+		childWindow.postMessage("Hello from Parent Window!", window.location.origin);
 	}else {
 		console.warn("No child window reference found.");
 	}

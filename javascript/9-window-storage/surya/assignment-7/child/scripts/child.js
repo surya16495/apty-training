@@ -1,6 +1,6 @@
 document.getElementById("sendMessageToParent").addEventListener("click", () => {
 	if (window.opener) {
-        window.opener.postMessage("Hello from Child Window!", "*");
+        window.opener.postMessage("Hello from Child Window!", window.location.origin);
     } else {
         console.warn("No opener window found.");
     }

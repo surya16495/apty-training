@@ -8,15 +8,17 @@ document.getElementById("openWindow").addEventListener("click", () => {
 });
 
 document.getElementById("closeWindow").addEventListener("click", () => {
-	if (newWindow) {
+	if (newWindow && !newWindow.closed) {
 		newWindow.close();
+	}
+	document.getElementById("closeWindow").disabled = true;
+	document.getElementById("resizeWindow").disabled = true;
+});
+document.getElementById("resizeWindow").addEventListener("click", () => {
+	if (newWindow && !newWindow.closed) {
+		newWindow.resizeTo(800, 600);
+	} else {
 		document.getElementById("closeWindow").disabled = true;
 		document.getElementById("resizeWindow").disabled = true;
-	}
-});
-
-document.getElementById("resizeWindow").addEventListener("click", () => {
-	if (newWindow) {
-		newWindow.resizeTo(800, 600);
 	}
 });
