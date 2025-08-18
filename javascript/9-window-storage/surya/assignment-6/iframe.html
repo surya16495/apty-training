@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PostMessage Example - Child</title>
+    <title>Child Iframe</title>
   </head>
   <body>
     <h1>Iframe Window</h1>
  
-    <input type="text" id="childMessage" placeholder="Message to parent" />
-    <button onclick="sendToParent()">Send to Parent</button>
+    <input id="childInput" type="text" placeholder="Message to parent" />
+    <button id="sendToParentBtn">Send to Parent</button>
  
-    <p><b>Message from parent:</b> <span id="parentMsg"></span></p>
+    <div id="childLog"></div>
  
     <script src="./scripts/iframe.js"></script>
   </body>
