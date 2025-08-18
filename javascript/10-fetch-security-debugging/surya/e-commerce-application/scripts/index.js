@@ -10,18 +10,25 @@ const result = document.getElementById("result-text");
 searchButton.addEventListener("click", async () => {
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {
-        const response = await fetch(`https://dummyjson.com/products/search?q=${searchTerm}`);
-        const data = await response.json();
-        console.log("Search results:", data.products);
-        if (data.products.length === 0) {
-            productList.innerHTML = "<div><img src='./sources/page-not-found.gif' alt='Not Found'/><br/><p style='text-align:center;'>No products found.</p></div>";
-            moveToTopButton.style.display = "none";
-            backButton.style.visibility = "visible";
-        } else {
-            displayProducts(data.products);
-            backButton.style.visibility = "visible";
-            moveToTopButton.style.display = "flex";
-            result.textContent = `Found ${data.products.length} products for "${searchTerm}"`;
+                try {
+            const response = await fetch(`https://dummyjson.com/products/search?q=${encodeURIComponent(searchTerm)}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.json();
+            if (data.products.length === 0) {
+                productList.innerHTML = "<div><img src='./sources/page-not-found.gif' alt='Not Found'/><br/><p style='text-align:center;'>No products found.</p></div>";
+                moveToTopButton.style.display = "none";
+                backButton.style.visibility = "visible";
+            } else {
+                displayProducts(data.products);
+                backButton.style.visibility = "visible";
+                moveToTopButton.style.display = "flex";
+                result.textContent = `Found ${data.products.length} products for \"${searchTerm}\"`;
+            }
+        } catch (error) {
+            console.error("Search failed:", error);
+            productList.innerHTML = "<div><p style='text-align:center;'>An error occurred during search. Please try again.</p></div>";
         }
     }
     document.getElementById("search-input").value = "";
@@ -30,29 +37,44 @@ searchButton.addEventListener("click", async () => {
 searchByIdButton.addEventListener("click", async () => {
     const searchId = searchByIdInput.value.trim();
     if (searchId) {
-        const response = await fetch(`https://dummyjson.com/products/${searchId}`);
-        const data = await response.json();
-        console.log("Search by ID result:", data);
-        if (!data) {
-            productList.innerHTML = "<div><img src='./sources/page-not-found.gif' alt='Not Found'/><br/><p style='text-align:center;'>No products found.</p></div>";
-            moveToTopButton.style.display = "none";
-            backButton.style.visibility = "visible";
-
-        } else {
+                try {
+            const response = await fetch(`https://dummyjson.com/products/${searchId}`);
+            if (!response.ok) {
+                throw new Error(`Product not found or network error. Status: ${response.status}`);
+            }
+            const data = await response.json();
             displayProducts([data]);
             backButton.style.visibility = "visible";
             moveToTopButton.style.display = "flex";
+        } catch (error) {
+            console.error('Search by ID failed:', error);
+            productList.innerHTML = "<div><img src='./sources/page-not-found.gif' alt='Not Found'/><br/><p style='text-align:center;'>No product found with that ID.</p></div>";
+            moveToTopButton.style.display = "none";
+            backButton.style.visibility = "visible";
         }
     }
     document.getElementById("searchById-input").value = "";
 });
 
+backButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    getAllProducts();
+});
+
 async function getAllProducts(){
-    const response = await fetch("https://dummyjson.com/products");
-    const data = await response.json();
-    displayProducts(data.products);
-    backButton.style.visibility = "hidden";
-    moveToTopButton.style.display = "flex";
+        try {
+        const response = await fetch("https://dummyjson.com/products");
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        displayProducts(data.products);
+        backButton.style.visibility = "hidden";
+        moveToTopButton.style.display = "flex";
+    } catch (error) {
+        console.error('Failed to load products:', error);
+        productList.innerHTML = "<div><p style='text-align:center;'>Could not load products. Please try again later.</p></div>";
+    }
 }
 
 function displayProducts(products) {
