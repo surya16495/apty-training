@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple E-Commerce Application</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>DummyShop <sub>- Because you are using dummy JSON</sub></h1>
+    </header>
+    <main>
+      <div class="filtering-section">
+        <div class="back-button">
+          <a href="#" onclick="getAllProducts()"><i class="fa-solid fa-arrow-left"></i>Back</a>
+        </div>
+        <div class="search-buttons">
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search products..."
+            />
+            <button id="search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="searchById-container">
+            <input
+              type="text"
+              id="searchById-input"
+              placeholder="Search by ID..."
+            />
+            <button id="searchById-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="products-section">
+        <p id="result-text"></p>
+        <div id="product-list"></div>
+      </div>
+      <div class="move-to-top">
+        <a href="#" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 E-Commerce Application</p>
+    </footer>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
